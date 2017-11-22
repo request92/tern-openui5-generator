@@ -1,5 +1,7 @@
 # tern-openui5-generator
 
+[![Build Status](https://travis-ci.org/request92/tern-openui5-generator?branch=master)](https://travis-ci.org/request92/tern-openui5-generator)
+
 This project generates the latest version of [OpenUI5](http://openui5.org/) framework for Tern Editor.
 You can access to this tool online (https://tern-openui5.appspot.com/)
 
