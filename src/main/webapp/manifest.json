@@ -1,0 +1,124 @@
+{
+	"_version": "1.2.0",
+	"sap.app": {
+		"_version": "1.2.0",
+		"id": "org.github.tern.openui5",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{app.title}}",
+		"description": "{{app.description}}",
+		"dataSources": {
+			"REST_SRV": {
+				"uri": "rest/services/version",
+				"type": "JSON"
+			}
+		}
+	},
+	"sap.ui": {
+		"_version": "1.2.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"handleValidation": true,
+		"rootView": {
+			"viewName": "org.github.tern.openui5.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {
+					
+				},
+				"sap.m": {
+					
+				},
+				"sap.ui.layout": {
+					
+				},
+				"sap.ui.unified": {
+					
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "org.github.tern.openui5.i18n.i18n"
+				}
+			},
+			"ui5": {
+				"dataSource": "REST_SRV",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "org.github.tern.openui5.view",
+				"viewType": "XML",
+				"controlId": "app",
+				"viewLevel": 1,
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"clearAggregation": true,
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "home"
+				}
+			],
+			"targets": {
+				"home": {
+					"viewName": "Home",
+					"transition": "show"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"transition": "show"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "src/main/webapp",
+		"_version": "1.1.0"
+	}
+}

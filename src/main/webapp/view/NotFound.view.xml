@@ -1,0 +1,3 @@
+<mvc:View controllerName="org.github.tern.openui5.controller.NotFound" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+  <MessagePage title="{i18n>page.NotFound.title}" text="{i18n>page.NotFound.text}" description="{i18n>page.NotFound.description}"/>
+</mvc:View>

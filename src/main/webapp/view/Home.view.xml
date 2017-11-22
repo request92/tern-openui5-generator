@@ -1,0 +1,26 @@
+<mvc:View height="100%" controllerName="org.github.tern.openui5.controller.Home" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:t="sap.ui.table">
+  <Page title="{i18n>app.title}" showNavButton="false">
+    <content>
+      <Panel headerText="{i18n>version} : {ui5>/version}" height="100%">
+        <content>
+          <t:Table rows="{ui5>/libraries}" selectionMode="None" visibleRowCountMode="Auto">
+            <t:columns>
+              <t:Column sortProperty="name" filterProperty="name" width="100%">
+                <Label text="{i18n>libraries}" />
+                <t:template>
+                  <Text text="{ui5>name}" />
+                </t:template>
+              </t:Column>
+            </t:columns>
+          </t:Table>
+        </content>
+      </Panel>
+    </content>
+    <footer>
+      <Toolbar>
+        <ToolbarSpacer />
+        <Button visible="true" text="{i18n>common.download}" enabled="true" type="Accept" icon="sap-icon://download" press="onDownload" />
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>
