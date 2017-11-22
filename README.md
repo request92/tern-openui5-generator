@@ -1,6 +1,6 @@
 # tern-openui5-generator
 
-This project generates the latest version of [OpenUI5](http://openui5.org/) framework for Tern editors.
+This project generates the latest version of [OpenUI5](http://openui5.org/) framework for Tern Editor.
 You can access to this tool online (https://tern-openui5.appspot.com/)
 
 This tool parse OpenUI5 metadata to generate class, property, method, interface and enum.
